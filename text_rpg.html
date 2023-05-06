@@ -5,7 +5,7 @@
 </head>
 <body>
     <form id="start_screen">
-        <input type="text" id="input" placeholder="이름을 입력하세요.">
+        <input id="name_input" placeholder="이름을 입력하세요.">
         <button type="submit">시작</button>
     </form>
     <div id="screen">
@@ -14,7 +14,7 @@
             <span id="hero_level"></span>
             <span id="hero_hp"></span>
             <span id="hero_xp"></span>
-            <span id="hero_att"></span>
+            <span id="hero_atk"></span>
         </div>
         <form id="game_menu" style="display: none;">
             <div id="menu1">1.던전</div>
@@ -34,11 +34,46 @@
         <div id="monster_stat">
             <span id="monster_name"></span>
             <span id="monster_hp"></span>
-            <span id="monster_att"></span>
+            <span id="monster_atk"></span>
         </div>
     </div>
     <script>
+        const $startScreen = document.querySelector('#start_screen');
+        const $gameMenu = document.querySelector('#game_menu');
+        const $battleMenu = document.querySelector('#battle_menu');
+        const $heroName = document.querySelector('#hero_name');
+        const $heroLevel = document.querySelector('#hero_level');
+        const $heroHp = document.querySelector('#hero_hp');
+        const $heroXp = document.querySelector('#hero_xp');
+        const $heroAtk = document.querySelector('#hero_atk');
+        const $monsterName = document.querySelector('#monster_name');
+        const $monsterHp = document.querySelector('#monster_hp');
+        const $monsterAtk = document.querySelector('#monster_atk');
+        const $message = document.querySelector('#message');
 
+        const hero = {
+            name: '',
+            level: 1,
+            hp: 100,
+            xp: 0,
+            atk: 10,
+        };
+        
+        let monster = null;
+
+        const monsterList = [
+            {name: '슬라임', hp: 30, atk: 10, xp: 10},
+            {name: '스켈레톤', hp: 50, atk: 15, xp: 20},
+            {name: '마왕', hp: 100, atk: 30, xp: 50},
+        ];
+
+        $startScreen.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            const name = e.target['name_input'].value;
+            $startScreen.style.display = 'none';
+            $gameMenu.style.display = 'block';
+            $heroName.textContent = name;
+        });
     </script>
 </body>
 </html>
