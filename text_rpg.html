@@ -1,0 +1,44 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>TEXTRPG</title>
+</head>
+<body>
+    <form id="start_screen">
+        <input type="text" id="input" placeholder="이름을 입력하세요.">
+        <button type="submit">시작</button>
+    </form>
+    <div id="screen">
+        <div id="hero_stat">
+            <span id="hero_name"></span>
+            <span id="hero_level"></span>
+            <span id="hero_hp"></span>
+            <span id="hero_xp"></span>
+            <span id="hero_att"></span>
+        </div>
+        <form id="game_menu" style="display: none;">
+            <div id="menu1">1.던전</div>
+            <div id="menu2">2.마을</div>
+            <div id="menu3">3.게임종료</div>
+            <input type="text" id="input" placeholder="메뉴를 선택하세요.">
+            <button id="menu_button">확인</button>
+        </form>
+        <form id="battle_menu" style="display: none;">
+            <div id="battle1">1.공격</div>
+            <div id="battle2">2.방어</div>
+            <div id="battle3">3.도망</div>
+            <input id="battle_input" />
+            <button id="battle_button">확인</button>
+        </form>
+        <div id="message"></div>
+        <div id="monster_stat">
+            <span id="monster_name"></span>
+            <span id="monster_hp"></span>
+            <span id="monster_att"></span>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
