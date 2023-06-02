@@ -1,0 +1,11 @@
+{
+  "name": "jquery",
+  "version": "1.0.0",
+  "description": "리액트가 트렌드이기는 하지만 아직 제이쿼리를 사용하는 곳이 많기 때문에 익혀보려고 연습중입니다.",
+  "main": "grocery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
